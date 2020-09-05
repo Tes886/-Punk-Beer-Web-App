@@ -29,10 +29,10 @@ export class BeerService {
   loadFavouriteBeers(): Observable<Beer> {
     return this.mapBeerObsevable(this._http.get(AppSettings.ALL_BEERS), true);
   }
-  
+
   private mapBeerObsevable(beerData: Observable<any>, onlyFavourites: boolean = false): Observable<Beer> {
     let favouriteBeerIds = this.getFavouriteBeerIds();
-    
+
     return beerData.pipe(
       map((data: any) => {
         // add is_favourite to the observer in order to adapt it to the Beer model in appropriate way
@@ -46,7 +46,7 @@ export class BeerService {
       }
     ))
   }
-  
+
   private getFavouriteBeerIds(): Array<number> {
     let favouriteBeers: Array<number> = JSON.parse(sessionStorage.getItem(AppSettings.SESSION_STORE_FAV_KEY));
 
