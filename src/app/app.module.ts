@@ -16,6 +16,7 @@ import { BeerCardComponent } from './beer-card/beer-card.component';
 import { FontAwesomeModule, FaIconLibrary } from '@fortawesome/angular-fontawesome';
 import { faStar as fasStar } from '@fortawesome/free-solid-svg-icons';
 import { faStar as farStar } from '@fortawesome/free-regular-svg-icons';
+import { JwPaginationModule } from 'jw-angular-pagination';
 
 import {NgxWebstorageModule} from 'ngx-webstorage';
 
@@ -26,7 +27,7 @@ import {NgxWebstorageModule} from 'ngx-webstorage';
     NavbarComponent,
     BeersComponent,
     FavouritesComponent,
-    BeerCardComponent    
+    BeerCardComponent
   ],
   imports: [
     BrowserModule,
@@ -36,6 +37,7 @@ import {NgxWebstorageModule} from 'ngx-webstorage';
     HttpClientJsonpModule,
     TruncateModule,
     FormsModule,
+    JwPaginationModule,
     FontAwesomeModule,
     NgxWebstorageModule.forRoot(),
     NgbModule

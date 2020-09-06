@@ -11,11 +11,12 @@ export class BeersComponent implements OnInit {
 
   beers: Array<Beer> = [];
   searchName: string;
-  
+
   constructor(private _beerService : BeerService) { }
 
   ngOnInit() {
     this.loadBeers();
+
   }
 
   loadBeers(searchName?: string) {
